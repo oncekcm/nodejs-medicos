@@ -1,11 +1,11 @@
 import Sequelize from "sequelize";
 
 export const sequelize = new Sequelize(
-  "projectsdb", // db name,
-  "postgres", // username
-  "dragon11", // password
+  "projectsdb_sfhi", // db name,
+  "projectsdb_sfhi_user", // username
+  "qiJ9NG9bPVtIURwUknt5lAeI6liQObNt", // password
   {
-    host: "localhost",
+    host: "postgres://projectsdb_sfhi_user:qiJ9NG9bPVtIURwUknt5lAeI6liQObNt@dpg-cpec6avsc6pc739dhr2g-a/projectsdb_sfhi",
     dialect: "postgres",
     // pool: {
     //   max: 5,
