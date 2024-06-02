@@ -18,7 +18,7 @@ export const sequelize = new Sequelize(
       }
     },
     logging: false, // Opcional: desactiva el registro de SQL en la consola
-  }
+  
     // pool: {
     //   max: 5,
     //   min: 0,
