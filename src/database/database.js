@@ -11,6 +11,7 @@ export const sequelize = new Sequelize(
     host: "dpg-cpec6avsc6pc739dhr2g-a.oregon-postgres.render.com",
     port: "5432",
     dialect: "postgres",
+    ssl: true,
     // pool: {
     //   max: 5,
     //   min: 0,
