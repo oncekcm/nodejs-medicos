@@ -1,6 +1,9 @@
 import Sequelize from "sequelize";
-
-export const sequelize = new Sequelize(
+export const sequelize = new Sequelize({
+  dialect: 'sqlite',
+  storage: './database.sqlite', // Archivo de la base de datos SQLite
+  logging: false
+/*export const sequelize = new Sequelize(
   "projectsdb_sfhi", // db name,
   "projectsdb_sfhi_user", // username
   "qiJ9NG9bPVtIURwUknt5lAeI6liQObNt", // password
@@ -16,4 +19,4 @@ export const sequelize = new Sequelize(
     // },
     // logging: false,
   }
-);
+);*/
