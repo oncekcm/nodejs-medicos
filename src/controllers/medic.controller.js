@@ -74,31 +74,19 @@ export const updateMedic = async (req, res) => {
 export async function deleteMedic(req, res) {
   const { id } = req.params;
   try {
-    await Task.destroy({
-      where: {
-        medicId: id,
-      },
-    });
-    await Medic.destroy({
+    const rowsDeleted = await Medic.destroy({
       where: {
         id,
       },
     });
+
+    if (rowsDeleted === 0) {
+      return res.status(404).json({ message: "Medic not found" });
+    }
+
     return res.sendStatus(204);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 }
 
-export async function getMedicOffices(req, res) {
-  const { id } = req.params;
-  try {
-    const offices = await Office.findAll({
-      attributes: ["id", "medicId", "name"],
-      where: { medicId: id },
-    });
-    res.json(offices);
-  } catch (e) {
-    return res.status(500).json({ message: e.message });
-  }
-}
