@@ -17,6 +17,6 @@ router.put("/:id", updateMedic);
 router.delete("/:id", deleteMedic);
 router.get("/:id", getMedic);
 
-router.get("/:id/offices", getMedicOffices);
+
 
 export default router;
