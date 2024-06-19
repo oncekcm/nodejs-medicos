@@ -5,7 +5,6 @@ import {
   updateMedic,
   getMedic,
   deleteMedic,
-  getMedicOffices,
 } from "../controllers/medic.controller.js";
 
 const router = Router();
